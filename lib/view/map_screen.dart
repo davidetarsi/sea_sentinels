@@ -30,7 +30,7 @@ class MapScreen extends StatelessWidget {
             const LatLng(-79, -192),
           ),
         ),
-        onTap: (markers == null || markers == []) ? onTap : null,
+        onLongPress: (markers == null || markers == []) ? onTap : null,
       ),
       children: [
         TileLayer(

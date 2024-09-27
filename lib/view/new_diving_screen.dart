@@ -32,6 +32,7 @@ class _NewDivingSurveyScreenState extends ConsumerState<NewDivingSurveyScreen> {
   late Diving newDiving = Diving.empty();
   late Provider newDivingProvider;
 
+  final _areaController = TextEditingController();
   late final List<TextEditingController> _controllers = [
     _dateTimeController,
     _depthController,
@@ -46,15 +47,14 @@ class _NewDivingSurveyScreenState extends ConsumerState<NewDivingSurveyScreen> {
   int _currentStep = 0;
   final _dateTimeController = TextEditingController();
   final _depthController = TextEditingController();
-  final _areaController = TextEditingController();
   LatLng? _divingPosition;
-  SoilType? _soilType;
-  final _maxDurationDepthController = TextEditingController();
   final _durationController = TextEditingController();
   final List<Marker> _markers = [];
+  final _maxDurationDepthController = TextEditingController();
   final _provinceController = TextEditingController();
   final _schoolController = TextEditingController();
   bool _showError = false;
+  SoilType? _soilType;
   final _temperatureController = TextEditingController();
 
   @override
@@ -226,48 +226,58 @@ class _NewDivingSurveyScreenState extends ConsumerState<NewDivingSurveyScreen> {
                   controller: _durationController,
                   label: 'Duration (in minutes)',
                   isNumber: true),
-              Row(
-                children: [
-                  const Text('Select a soil:'),
-
-                  // Spazio tra il testo e i radio buttons
-                  const SizedBox(width: 16),
-                  // Primo radio button
-                  Radio<SoilType>(
-                    value: SoilType.sandy,
-                    groupValue: _soilType,
-                    onChanged: (SoilType? valore) {
-                      setState(() {
-                        _soilType = valore;
-                      });
-                    },
-                  ),
-                  const Text('sandy'),
-
-                  // Secondo radio button
-                  Radio<SoilType>(
-                    value: SoilType.rocky,
-                    groupValue: _soilType,
-                    onChanged: (SoilType? valore) {
-                      setState(() {
-                        _soilType = valore;
-                      });
-                    },
-                  ),
-                  const Text('rocky'),
-
-                  // Terzo radio button
-                  Radio<SoilType>(
-                    value: SoilType.other,
-                    groupValue: _soilType,
-                    onChanged: (SoilType? valore) {
-                      setState(() {
-                        _soilType = valore;
-                      });
-                    },
-                  ),
-                  const Text('other'),
-                ],
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8,3,0,5),
+                child: Row(
+                  children: [
+                    const Text('Soil:',
+                    style: TextStyle(color: kBlueGrey,
+                    fontSize: 15),
+                    ),
+                    
+                    // Spazio tra il testo e i radio buttons
+                    const SizedBox(width: 39),
+                    // Primo radio button
+                    Radio<SoilType>(
+                      value: SoilType.sandy,
+                      groupValue: _soilType,
+                      onChanged: (SoilType? valore) {
+                        setState(() {
+                          _soilType = valore;
+                        });
+                      },
+                      activeColor: kYellow,
+                    ),
+                    const Text('Sandy',
+                    style: TextStyle(color: kBlueGrey),),
+                
+                    // Secondo radio button
+                    Radio<SoilType>(
+                      value: SoilType.rocky,
+                      groupValue: _soilType,
+                      onChanged: (SoilType? valore) {
+                        setState(() {
+                          _soilType = valore;
+                        });
+                      },
+                    ),
+                    const Text('Rocky',
+                    style: TextStyle(color: kBlueGrey),),
+                
+                    // Terzo radio button
+                    Radio<SoilType>(
+                      value: SoilType.other,
+                      groupValue: _soilType,
+                      onChanged: (SoilType? valore) {
+                        setState(() {
+                          _soilType = valore;
+                        });
+                      },
+                    ),
+                    const Text('Other',
+                    style: TextStyle(color: kBlueGrey),),
+                  ],
+                ),
               ),
             ],
           ),

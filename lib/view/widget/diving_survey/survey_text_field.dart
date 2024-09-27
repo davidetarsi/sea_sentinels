@@ -55,21 +55,24 @@ class SurveyTextField extends StatelessWidget {
                     context: context,
                     initialTime: TimeOfDay.now(),
                     builder: (context, child) {
-                      return Theme(
-                        data: Theme.of(context).copyWith(
-                          colorScheme: const ColorScheme.dark(
-                            primary: kYellow, // header background color
-                            onPrimary: kDarkBlue, // header text color
-                            surface: kDarkBlue,
-                            onSurface: kBlueGrey, // body text color
-                          ),
-                          textButtonTheme: TextButtonThemeData(
-                            style: TextButton.styleFrom(
-                              foregroundColor: kYellow, // button text color
+                      return _hourFormatBuilder(
+                        context,
+                        Theme(
+                          data: Theme.of(context).copyWith(
+                            colorScheme: const ColorScheme.dark(
+                              primary: kYellow, // header background color
+                              onPrimary: kDarkBlue, // header text color
+                              surface: kDarkBlue,
+                              onSurface: kBlueGrey, // body text color
+                            ),
+                            textButtonTheme: TextButtonThemeData(
+                              style: TextButton.styleFrom(
+                                foregroundColor: kYellow, // button text color
+                              ),
                             ),
                           ),
+                          child: child!,
                         ),
-                        child: child!,
                       );
                     },
                   ).then((pickedTime) {
@@ -132,4 +135,15 @@ class SurveyTextField extends StatelessWidget {
       ],
     );
   }
+}
+
+Widget _hourFormatBuilder(BuildContext context, Widget? child) {
+  final mediaQueryData = MediaQuery.of(context);
+
+  return MediaQuery(
+    data: mediaQueryData.alwaysUse24HourFormat
+        ? mediaQueryData
+        : mediaQueryData.copyWith(alwaysUse24HourFormat: true),
+    child: child!,
+  );
 }
