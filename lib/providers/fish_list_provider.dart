@@ -8,7 +8,7 @@ part 'fish_list_provider.g.dart';
 
 @Riverpod()
 Future<List<FishItem>> getFishCollection(GetFishCollectionRef ref) async {
-  final FishRepository repository = await ref.read(fishRepositoryProvider.future);
-  final fishCollection = repository.fetchFishCollection();
+  final FishRepository repository = await ref.watch(fishRepositoryProvider.future);
+  final fishCollection = await repository.fetchFishCollection();
   return fishCollection;
 }

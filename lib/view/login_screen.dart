@@ -106,22 +106,66 @@ class _LoginScreenState extends State<LoginScreen> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future<void> loginUser() async {
+    setState(() {
+      errorMessage = null; // Reset any previous error message
+    });
+
     try {
-      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+      UserCredential? userCredential = await _auth.signInWithEmailAndPassword(
         email: _emailController.text,
         password: _passwordController.text,
       );
-      print("Login correct: ${userCredential.user!.uid}");
-      // Login riuscito, naviga alla schermata successiva
-      //Navigator.pushReplacementNamed(context, '/home');
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const HomeTabScreen()));
+
+      // Verifica aggiuntiva per assicurarsi che l'utente esista
+      if (userCredential.user != null && userCredential.user!.uid.isNotEmpty) {
+        print("Login correct: ${userCredential.user!.uid}");
+
+        // Login riuscito, naviga alla schermata successiva
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const HomeTabScreen()));
+      } else {
+        throw FirebaseAuthException(
+            code: 'user-not-found',
+            message: 'Nessun utente trovato per questa email.');
+      }
     } on FirebaseAuthException catch (e) {
+      String message;
+
+      switch (e.code) {
+        case 'user-not-found':
+          message = 'Nessun utente trovato per questa email.';
+          break;
+        case 'wrong-password':
+          message = 'Password errata per questo utente.';
+          break;
+        case 'invalid-email':
+          message = 'Email address is not valid.';
+          break;
+        case 'user-disabled':
+          message = 'Questo utente è stato disabilitato.';
+          break;
+        default:
+          message = '${e.message}';
+      }
+
       setState(() {
-        errorMessage = e.message!;
-        /* ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text(e.message!))); */
+        errorMessage = message;
       });
+
+      // Mostra un SnackBar con il messaggio di errore
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text(message),
+        backgroundColor: kYellow,
+      ));
+    } catch (e) {
+      setState(() {
+        errorMessage = 'Si è verificato un errore imprevisto.';
+      });
+
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('Si è verificato un errore imprevisto.'),
+        backgroundColor: Colors.red,
+      ));
     }
   }
 
@@ -199,8 +243,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   UserButton(
                       text: 'Login',
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const HomeTabScreen()));
+                        loginUser();
+                        /* Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => const HomeTabScreen())); */
                       } //loginUser,
                       ),
                   const SizedBox(height: 20),
@@ -217,9 +262,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => const SignUpScreen()));
                       }),
+                  const SizedBox(height: 20),
                   if (errorMessage != null)
                     Text(errorMessage!,
-                        style: const TextStyle(color: Colors.red)),
+                        style: const TextStyle(color: kYellow)),
                 ],
               ),
             ),

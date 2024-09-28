@@ -57,7 +57,7 @@ class DivingInformations extends StatelessWidget {
               text: ' ${diving.duration.toString().substring(0, 4)} h'),
              const Center(
                 child: Text(
-                  'Fish seen:',
+                  'Species seen:',
                   style: TextStyle(
                     color: kYellow,
                     fontSize: 20,
@@ -65,7 +65,7 @@ class DivingInformations extends StatelessWidget {
                 ),
               ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(15, 0, 15, 15),
+              padding: const EdgeInsets.fromLTRB(15, 10, 15, 15),
               child: GridView.builder(
                 shrinkWrap: true,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

@@ -12,7 +12,7 @@ class FishDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyScaffold(
-      title: "Fish details",
+      title: "Species details",
       body: Center(
         child: Padding(
             padding: const EdgeInsets.all(10),

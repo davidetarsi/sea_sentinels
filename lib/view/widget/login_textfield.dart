@@ -34,7 +34,7 @@ class LoginTextField extends StatelessWidget {
         if (isPassword && checkPassword && value != checker!.text) {
           return 'The second password does not match';
         }
-        if (isPassword && value.length <6) {
+        if (isPassword && value.length < 6) {
           return 'Password must contain at least 6 characters';
         }
         return null;
@@ -62,16 +62,16 @@ class LoginTextField extends StatelessWidget {
             width: 2, // Cambia il colore del bordo qui
           ),
         ),
-        /* enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: kBlueGrey, // Cambia il colore del bordo qui
-          ),
-        ), */
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: kBlueGrey,
           ),
           borderRadius: BorderRadius.circular(10),
+        ),
+        errorStyle: const TextStyle(color: kYellow),
+        errorBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: kYellow),
+          borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
       ),
     );

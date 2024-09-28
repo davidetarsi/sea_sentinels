@@ -108,6 +108,11 @@ class SurveyTextField extends StatelessWidget {
               borderSide: BorderSide(color: kYellow),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
+            errorStyle: const TextStyle(color: kYellow),
+            errorBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: kYellow),
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
           ),
           validator: (value) {
             if (isNumber) {

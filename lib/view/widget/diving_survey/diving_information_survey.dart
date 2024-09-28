@@ -33,7 +33,7 @@ class DivingInformationSurvey extends StatelessWidget {
           
           const Center(
             child: Text(
-              'Fish seen:',
+              'Species seen:',
               style: TextStyle(
                 color: kYellow,
                 fontSize: 20,

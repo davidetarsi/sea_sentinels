@@ -14,3 +14,4 @@ const kBlueGrey = Color.fromRGBO(202, 207, 214, 1);
 const kLightDarkBlue = Color.fromRGBO(34, 61, 68, 1);
 const kOriginalBlue = Color.fromRGBO(43, 53, 125, 1);
 final dateFormat = DateFormat("dd-MM-yyyy HH:mm:ss");
+const errorColor = Color.fromARGB(255, 152, 0, 0);

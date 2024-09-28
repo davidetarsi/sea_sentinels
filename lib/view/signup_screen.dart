@@ -27,6 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Future<void> registerUser() async {
     if (_formKey.currentState!.validate()) {
+      FocusManager.instance.primaryFocus?.unfocus();
       try {
         final UserCredential userCredential =
             await _auth.createUserWithEmailAndPassword(
@@ -108,17 +109,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         text: 'Already have an account? ',
                         buttonText: 'Login',
                         onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => const HomeTabScreen()));
-                          /*  Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const LoginScreen())); */
+                          /*Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const HomeTabScreen()));*/
+                           Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => const LoginScreen())); 
                         }),
                     if (_errorMessage != null)
                       Padding(
                         padding: const EdgeInsets.only(top: 16.0),
                         child: Text(
                           _errorMessage!,
-                          style: const TextStyle(color: Colors.red),
+                          style: const TextStyle(color: kYellow),
                         ),
                       ),
                   ],

@@ -16,6 +16,7 @@ class FirebaseFishRepository implements FishRepository {
   Future<bool> init() async {
     fishVault = await ref.watch(fishDataProvider.future);
     divingRepository = await ref.watch(divingRepositoryProvider.future);
+    print('Fish repository initialized');
     return Future.value(true);
   }
 
@@ -23,11 +24,18 @@ class FirebaseFishRepository implements FishRepository {
   Future<List<FishItem>> fetchFishCollection() async {
     //TODO: da sistemare quando ci sarà il db
     List<Diving> dives = await divingRepository!.getAllDives();
+    print('Dives fetched');
+    print(dives);
     List<FishItem> divesFishList = [];
     for (Diving dive in dives) {
-      divesFishList.addAll(dive.fishList);
+      for (FishItem fishItem in dive.fishList) {
+        if (!divesFishList.contains(fishItem)) {
+          divesFishList.add(fishItem);
+        }
+      }
     }
     updateFishCollection(divesFishList);
+    print('Fish collection fetched');
     return fishVault.fishCollection;
   }
 
@@ -54,8 +62,10 @@ class FirebaseFishRepository implements FishRepository {
           .removeWhere((FishItem fish) => fish.fish.name == newFishName);
       fishVault.fishCollection.add(fishItem);
     }
+    print('Fish collection updated');
     fishVault.fishCollection.sort((fishItemA, fishItemB) =>
         fishItemA.fish.name.compareTo(fishItemB.fish.name));
+    print('Fish collection sorted');
   }
 
   @override

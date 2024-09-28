@@ -10,7 +10,7 @@ part "fish_repository.g.dart";
 Future<FishRepository> fishRepository(FishRepositoryRef ref) async {
   //throw UnimplementedError();
   //TODO crea e instanzia la repository che ti serve (db? file? mock?)
-  final repository = DbFishRepository(ref);
+  final repository = FirebaseFishRepository(ref);
   await repository.init();
   return repository;
 }

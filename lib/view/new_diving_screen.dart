@@ -285,7 +285,7 @@ class _NewDivingSurveyScreenState extends ConsumerState<NewDivingSurveyScreen> {
         isActive: _currentStep >= 1,
       ),
       FxStep(
-        title: Text('Fish seen',
+        title: Text('Sighted species',
             style: TextStyle(color: _currentStep >= 2 ? kYellow : kBlueGrey)),
         content: fishListAsync.when(
           data: (repo) {

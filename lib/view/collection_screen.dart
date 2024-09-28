@@ -19,7 +19,7 @@ class CollectionScreen extends ConsumerWidget {
 
     return MyScaffold(
       backButton: false,
-      title: "My fish collection",
+      title: "My species collection",
       body: fishListAsync.when(
         data: (fishList) {
           return GridView.count(
