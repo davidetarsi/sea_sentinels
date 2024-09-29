@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:sea_sentinels/model/diving_model.dart';
-import 'package:sea_sentinels/repositories/db_diving_repository.dart';
+import 'package:sea_sentinels/repositories/local_diving_repository.dart';
 import 'package:sea_sentinels/repositories/firebase_diving_repository.dart';
 
 part "diving_repository.g.dart";

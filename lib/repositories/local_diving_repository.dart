@@ -4,13 +4,13 @@ import 'package:sea_sentinels/model/diving_model.dart';
 import 'package:uuid/uuid.dart';
 
 //TODO tu puoi creare un repository per il db e un altro per leggere json, oppure per fare testing
-class DbDivingRepository implements DivingRepository {
+class LocalDivingRepository implements DivingRepository {
   //qua dentro ci saranno le dives che leggiamo dal db o da un file
   late DivingData divingVault;
   final DivingRepositoryRef ref;
   String id = '';
 
-  DbDivingRepository(this.ref);
+  LocalDivingRepository(this.ref);
 
   @override
   Future<bool> init() async {

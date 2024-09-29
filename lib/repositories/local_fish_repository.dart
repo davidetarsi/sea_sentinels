@@ -3,11 +3,11 @@ import 'package:sea_sentinels/model/fish_item_model.dart';
 import 'package:sea_sentinels/model/fish_model.dart';
 import 'package:sea_sentinels/repositories/fish_repository.dart';
 
-class DbFishRepository implements FishRepository {
+class LocalDivingRepository implements FishRepository {
   late final FishData fishVault;
   final FishRepositoryRef ref;
 
-  DbFishRepository(this.ref);
+  LocalDivingRepository(this.ref);
 
   @override
   Future<bool> init() async {

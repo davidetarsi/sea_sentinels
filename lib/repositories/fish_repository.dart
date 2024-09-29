@@ -1,7 +1,7 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:sea_sentinels/model/fish_item_model.dart';
 import 'package:sea_sentinels/model/fish_model.dart';
-import 'package:sea_sentinels/repositories/db_fish_repository.dart';
+import 'package:sea_sentinels/repositories/local_fish_repository.dart';
 import 'package:sea_sentinels/repositories/firebase_fish_repository.dart';
 
 part "fish_repository.g.dart";
