@@ -9,10 +9,10 @@ This README provides mockups of the app and detailed instructions on how to set 
 
 ### 1. Authentication and Profile
 <p align="center">
-  <img src="mockups_app/Signup_page.png" width="250" alt="Sign Up Page"/>
-  <img src="mockups_app/Login_page.png" width="250" alt="Login Page"/>
-  <img src="mockups_app/Profile_page.png" width="250" alt="User Profile"/>
-  <img src="mockups_app/Change_password_page.png" width="250" alt="Change Password"/>
+  <img src="mockups_app/Signup_page.png" width="180" alt="Sign Up Page"/>
+  <img src="mockups_app/Login_page.png" width="180" alt="Login Page"/>
+  <img src="mockups_app/Profile_page.png" width="180" alt="User Profile"/>
+  <img src="mockups_app/Change_password_page.png" width="180" alt="Change Password"/>
 </p>
 <p align="center">
   
@@ -25,8 +25,8 @@ This README provides mockups of the app and detailed instructions on how to set 
 
 ### 2. Home and Dive Details
 <p align="center">
-  <img src="mockups_app/Home_page.png" width="250" alt="Home Page"/>
-  <img src="mockups_app/Diving_information_page.png" width="250" alt="Dive Details"/>
+  <img src="mockups_app/Home_page.png" width="180" alt="Home Page"/>
+  <img src="mockups_app/Diving_information_page.png" width="180" alt="Dive Details"/>
 </p>
 <p align="center">
   
@@ -38,9 +38,9 @@ This README provides mockups of the app and detailed instructions on how to set 
 
 ### 3. Marine Species Collection
 <p align="center">
-  <img src="mockups_app/Collection_page.png" width="250" alt="Marine Species Collection"/>
-  <img src="mockups_app/Dive Information.png" width="250" alt="Species Details"/>
-  <img src="mockups_app/Wiki information.png" width="250" alt="Wikipedia Page"/>
+  <img src="mockups_app/Collection_page.png" width="180" alt="Marine Species Collection"/>
+  <img src="mockups_app/Dive Information.png" width="180" alt="Species Details"/>
+  <img src="mockups_app/Wiki information.png" width="180" alt="Wikipedia Page"/>
 </p>
 <p align="center">
   
@@ -53,11 +53,11 @@ This README provides mockups of the app and detailed instructions on how to set 
 
 ### 4. New Dive Questionnaire
 <p align="center">
-  <img src="mockups_app/Survey_first_page.png" width="250" alt="Map Position Selection"/>
-  <img src="mockups_app/Survey_second_page.png" width="250" alt="Dive Data Entry"/>
-  <img src="mockups_app/Survey_third_page.png" width="250" alt="Marine Species Selection"/>
-  <img src="mockups_app/Survey_species.png" width="250" alt="Species Quantity"/>
-  <img src="mockups_app/Survey_fourth_page.png" width="250" alt="Dive Summary"/>
+  <img src="mockups_app/Survey_first_page.png" width="180" alt="Map Position Selection"/>
+  <img src="mockups_app/Survey_second_page.png" width="180" alt="Dive Data Entry"/>
+  <img src="mockups_app/Survey_third_page.png" width="180" alt="Marine Species Selection"/>
+  <img src="mockups_app/Survey_species.png" width="180" alt="Species Quantity"/>
+  <img src="mockups_app/Survey_fourth_page.png" width="180" alt="Dive Summary"/>
 </p>
 <p align="center">
   
