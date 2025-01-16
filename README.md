@@ -2,6 +2,69 @@ Sea Sentinels
 
 Sea Sentinels is a Flutter application designed for [brief description of your app's purpose]. This README provides detailed instructions on how to set up and run the application on your local machine.
 
+****
+
+## Application mockups
+
+### 1. Autenticazione e Profilo
+<p align="center">
+  <img src="mockup_app/Signup_page.png" width="250" alt="Pagina di Sign Up"/>
+  <img src="mockup_app/Login_page.png" width="250" alt="Pagina di Login"/>
+  <img src="mockup_app/Profile_page.png" width="250" alt="Profilo Utente"/>
+  <img src="mockup_app/Change_password_page.png" width="250" alt="Cambio Password"/>
+</p>
+<p align="center">
+  **Sign Up e Login:** Accesso e registrazione all'app.  
+  **Profilo Utente:** Visualizzazione delle informazioni personali.  
+  **Cambio Password:** Modulo per aggiornare la password.
+</p>
+
+---
+
+### 2. Home e Dettaglio Immersione
+<p align="center">
+  <img src="mockup_app/Home_page.png" width="250" alt="Pagina Home"/>
+  <img src="mockup_app/Diving_information_page.png" width="250" alt="Dettaglio Immersione"/>
+</p>
+<p align="center">
+  **Home:** Mappa interattiva con i marker delle immersioni.  
+  **Dettaglio Immersione:** Informazioni approfondite visualizzabili cliccando sui marker.
+</p>
+
+---
+
+### 3. Collection di Specie Marine
+<p align="center">
+  <img src="mockup_app/Collection_page.png" width="250" alt="Collection Specie Marine"/>
+  <img src="mockup_app/Dive Information.png" width="250" alt="Dettaglio Specie Marina"/>
+  <img src="mockup_app/Wiki information.png" width="250" alt="Pagina Wikipedia"/>
+</p>
+<p align="center">
+  **Collection:** Elenco delle specie marine avvistate.  
+  **Dettaglio Specie:** Informazioni specifiche su ogni specie.  
+  **Wikipedia:** Collegamento alla pagina informativa esterna.
+</p>
+
+---
+
+### 4. Questionario Nuova Immersione
+<p align="center">
+  <img src="assets/Survey_first_page.png" width="250" alt="Selezione Posizione sulla Mappa"/>
+  <img src="assets/Survey_second_page.png" width="250" alt="Inserimento Dati Immersione"/>
+  <img src="assets/Survey_third_page.png" width="250" alt="Selezione Specie Marine"/>
+  <img src="assets/Survey_species.png" width="250" alt="Quantità Specie Avvistate"/>
+  <img src="assets/Survey_fourth_page.png" width="250" alt="Riassunto Immersione"/>
+</p>
+<p align="center">
+  **Pagina 1:** Selezione della posizione tramite mappa interattiva.  
+  **Pagina 2:** Inserimento dei dati dell'immersione.  
+  **Pagina 3:** Scelta delle specie avvistate, simile alla pagina Collection.  
+  **Pagina 4:** Selezione della quantità per ogni specie.  
+  **Pagina 5:** Riassunto completo dei dati inseriti.
+</p>
+
+
+**Setup**
 Prerequisites
 Before you begin, ensure you have the following installed on your system:
 
