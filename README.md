@@ -15,6 +15,7 @@ This README provides mockups of the app and detailed instructions on how to set 
   <img src="mockup_app/Change_password_page.png" width="250" alt="Change Password"/>
 </p>
 <p align="center">
+  
   **Sign Up and Login:** Access and registration to the app.  
   **User Profile:** Viewing personal information.  
   **Change Password:** Form to update the password.
@@ -28,6 +29,7 @@ This README provides mockups of the app and detailed instructions on how to set 
   <img src="mockup_app/Diving_information_page.png" width="250" alt="Dive Details"/>
 </p>
 <p align="center">
+  
   **Home:** Interactive map with dive markers.  
   **Dive Details:** In-depth information viewable by clicking on the markers.
 </p>
@@ -41,6 +43,7 @@ This README provides mockups of the app and detailed instructions on how to set 
   <img src="mockup_app/Wiki information.png" width="250" alt="Wikipedia Page"/>
 </p>
 <p align="center">
+  
   **Collection:** List of sighted marine species.  
   **Species Details:** Specific information about each species.  
   **Wikipedia:** Link to the external information page.
@@ -50,13 +53,14 @@ This README provides mockups of the app and detailed instructions on how to set 
 
 ### 4. New Dive Questionnaire
 <p align="center">
-  <img src="assets/Survey_first_page.png" width="250" alt="Map Position Selection"/>
-  <img src="assets/Survey_second_page.png" width="250" alt="Dive Data Entry"/>
-  <img src="assets/Survey_third_page.png" width="250" alt="Marine Species Selection"/>
-  <img src="assets/Survey_species.png" width="250" alt="Species Quantity"/>
-  <img src="assets/Survey_fourth_page.png" width="250" alt="Dive Summary"/>
+  <img src="mockup_app/Survey_first_page.png" width="250" alt="Map Position Selection"/>
+  <img src="mockup_app/Survey_second_page.png" width="250" alt="Dive Data Entry"/>
+  <img src="mockup_app/Survey_third_page.png" width="250" alt="Marine Species Selection"/>
+  <img src="mockup_app/Survey_species.png" width="250" alt="Species Quantity"/>
+  <img src="mockup_app/Survey_fourth_page.png" width="250" alt="Dive Summary"/>
 </p>
 <p align="center">
+  
   **Page 1:** Select the position via an interactive map.  
   **Page 2:** Enter dive data.  
   **Page 3:** Choose the sighted species, similar to the Collection page.  
